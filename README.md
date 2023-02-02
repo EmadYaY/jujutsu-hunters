@@ -1,1 +1,1 @@
-# jujutsu-hunters
+# Jujutsu Hunters
