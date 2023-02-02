@@ -15,4 +15,4 @@ requests:
       - type: word
         part: body
         words:
-          - "alert(origin)"
+          - "<script>alert(origin)</script>"
